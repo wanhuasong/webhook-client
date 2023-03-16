@@ -106,6 +106,8 @@ func main() {
 	}
 	defer f()
 
+	logger.Info("log file created", zap.String("file", logFile))
+
 	initRouter()
 	run()
 }
